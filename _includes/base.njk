@@ -3,8 +3,9 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Deno Package Manager</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+  <link rel="stylesheet" href="./styles/base.css">
 </head>
 
 <body>
@@ -36,68 +37,95 @@
       </div>
     </div>
   </section>
-  <div>
 
-    <section class="section is-medium has-text-centered">
-      <p class="title">Why would use DPM?</p>
-      <div class="tile is-ancestor">
-        <div class="tile is-4 is-vertical is-parent">
-          <div class="tile is-child box">
-            <p class="title">Manage all modules</p>
-            <img src="./img/eggs96.png" alt="Deno Package Manager Ilustration Demo">
+  <section class="section is-medium has-text-centered">
+    <p class="title">The New Era of Deno Code!</p>
+    <div class="tile is-ancestor">
+      <div class="tile is-4 is-vertical is-parent">
+        <div class="tile is-child box">
+          <p class="title">Manage all modules</p>
+          <img src="./img/eggs96.png" alt="Deno Package Manager Ilustration Demo">
 
-            <div class="content block">
-              <p>You can manage all modules from <strong><a href="http://github.com">GitHub</a>, <a
-                    href="http://deno.land/x">Deno External Modules</a>, <a href="http://nest.land">Nest
-                    Land</a></strong>
-                and this makes it very versatile and easy to include in any project. An easy and simple way to work with
-                Deno as modules and also manage any type of project</p>
-            </div>
-
-            <p class="is-size-7">
-              <a target="_blank" href="https://icons8.com/icon/1MIUpRTwcaOC/dinosaur-egg">Dinosaur Egg</a> icon by <a
-                target="_blank" href="https://icons8.com">Icons8</a>
-            </p>
+          <div class="content block">
+            <p>You can manage all modules from <strong><a href="http://github.com">GitHub</a>, <a
+                  href="http://deno.land/x">Deno External Modules</a>, <a href="http://nest.land">Nest
+                  Land</a></strong>
+              and this makes it very versatile and easy to include in any project. An easy and simple way to work with
+              Deno as modules and also manage any type of project</p>
           </div>
-        </div>
-        <div class="tile is-parent">
-          <div class="tile is-child box">
-            <p class="title">Features</p>
-            <div class="content has-text-left">
-              <ul>
-                <li>Build with 100% Typescript</li>
-                <li>Deno Lint, Format command support</li>
-                <li>Config generator for <em>deno lint</em>, <em>deno fmt</em>, <em>deno test</em></li>
-                <li>Manage all in a <code>dpm.json</code> file with the same syntax of the <code>package.json</code> and
-                  more features</li>
-                <li>Generate all dependencies from a <code>import_map.json</code> file</li>
-                <li>Offline documentation manager</li>
-                <li>Tools helper manager, install all tools for a better Deno Development</li>
-                <li>Update the dependencies manager!</li>
-                <li>Information about some directories and versions!</li>
-                <li>Powerfull Logger sistem!</li>
-                <li>Open Source!</li>
-              </ul>
-            </div>
-          </div>
+
+          <p class="is-size-7">
+            <a target="_blank" href="https://icons8.com/icon/1MIUpRTwcaOC/dinosaur-egg">Dinosaur Egg</a> icon by <a
+              target="_blank" href="https://icons8.com">Icons8</a>
+          </p>
         </div>
       </div>
-    </section>
+      <div class="tile is-parent">
+        <div class="tile is-child box">
+          <p class="title">Features</p>
+          <div class="content has-text-left">
+            <ul>
+              <li>Build with 100% Typescript</li>
+              <li>Deno Lint, Format command support</li>
+              <li>Config generator for <em>deno lint</em>, <em>deno fmt</em>, <em>deno test</em></li>
+              <li>Manage all in a <code>dpm.json</code> file with the same syntax of the <code>package.json</code> and
+                more features</li>
+              <li>Generate all dependencies from a <code>import_map.json</code> file</li>
+              <li>Offline documentation manager</li>
+              <li>Tools helper manager, install all tools for a better Deno Development</li>
+              <li>Update the dependencies manager!</li>
+              <li>Information about some directories and versions!</li>
+              <li>Powerfull Logger sistem!</li>
+              <li>Open Source!</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <section class="section">
-      <h1 class="title has-text-centered block">Installation</h1>
-      <div class="notification is-warning is-light">
-        <strong>WARNING:</strong> DPM <i>Deno Package Manager</i> is currently in a stable but can exists some bugs if
-        you want help to make this tool better can you report the bugs on the <strong><a
-            href="http://github.com/dpmland/dpm/issues" target="_blank" rel="noopener noreferrer">issues</a></strong>
-        tab on the official repo. <i>Thanks for make this tool better and help to the Deno Community</i>
-      </div>
-      <div class="content">
-        <!-- TODO: Fix the position and add more colors! -->
-        {{ content | safe }}
-      </div>
-    </section>
+  <section class="section block">
+    <h1 class="title has-text-centered block">Installation</h1>
+    <div class="notification is-warning is-light">
+      <strong>WARNING:</strong> DPM <i>Deno Package Manager</i> is currently in a stable but can exists some bugs if
+      you want help to make this tool better can you report the bugs on the <strong><a
+          href="http://github.com/dpmland/dpm/issues" target="_blank" rel="noopener noreferrer">issues</a></strong>
+      tab on the official repo. <i>Thanks for make this tool better and help to the Deno Community</i>
+    </div>
+    <div class="content">
+      {{ content | safe }}
+    </div>
+  </section>
+
+<section class="section">
+  <h1 class="title has-text-centered block">
+    Tools made by DPM Team!
+  </h1>
+  <div class="notification is-info is-light">
+    <strong>INFO:</strong> This tools are completely Open Source and can be used for anyone. Some of this tools or of this code is forked or adapted from other repos if you want help to make this tool better can make a pull request to this repos. <i>The Deno and DPM Community appreciate your help</i>
   </div>
+  <nav class="level">
+    <div class="level-item has-text-centered">
+      <div>
+        <p class="heading">LOGGER</p>
+        <p class="title"><a href="http://github.com/dpmland/dlog" target="_blank" rel="noopener noreferrer">DLOG</a></p>
+      </div>
+    </div>
+    <div class="level-item has-text-centered">
+      <div>
+        <p class="heading">SYSTEM INFORMATION</p>
+        <p class="title"><a href="http://github.com/dpmland/draco" target="_blank" rel="noopener noreferrer">DRACO</a></p>
+      </div>
+    </div>
+    <div class="level-item has-text-centered">
+      <div>
+        <p class="heading">SOON</p>
+        <p class="title">ANZU</p>
+      </div>
+    </div>
+  </nav>
+</section>
+
   {% include "templates/footer.njk" %}
 </body>
 
