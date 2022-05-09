@@ -16,6 +16,6 @@ site.ignore('README.md', 'CODE_OF_CONDUCT.md');
 
 // Copy the files necessary
 site.copy('img');
-site.copy('styles');
+site.copy('styles', '.');
 
 export default site;
