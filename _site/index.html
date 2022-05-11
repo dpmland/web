@@ -89,15 +89,12 @@
     </div>
     <div class="content">
       <h4>Steps to the Installation</h4>
-<ul>
-<li>Stable version</li>
-</ul>
-<pre><code class="language-sh hljs language-bash">deno install -Afn dpm --unstable --import-map=https://deno.land/x/dpm/import_map.json https://deno.land/x/dpm/cli.ts &amp;&amp; dpm doc -d &amp;&amp; dpm tools install
-</code></pre>
-<ul>
-<li>Canary ( Ultimate features )</li>
-</ul>
-<pre><code>deno install -qAf --unstable --import-map=https://denopkg.com/dpmland/dpm@dev/import_map.json https://denopkg.com/dpmland/dpm@dev/dpm.ts &amp;&amp; dpm doc -d &amp;&amp; dpm tools install
+<blockquote>
+<p>Unstable version</p>
+</blockquote>
+<p>If you want test dpm in the development version <strong>NOT DOCUMENTATION PROVIDED</strong>
+and <strong>NO COMPLETE FEATURES</strong> can you install with:</p>
+<pre><code class="language-sh hljs language-bash">deno run -A --unstable https://denopkg.com/dpmland/dpm@dev/install.ts
 </code></pre>
 
     </div>

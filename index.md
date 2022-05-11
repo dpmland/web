@@ -4,14 +4,11 @@ layout: base.njk
 
 #### Steps to the Installation
 
-- Stable version
+> Unstable version
+
+If you want test dpm in the development version **NOT DOCUMENTATION PROVIDED** and **NO
+COMPLETE FEATURES** can you install with:
 
 ```sh
-deno install -Afn dpm --unstable --import-map=https://deno.land/x/dpm/import_map.json https://deno.land/x/dpm/cli.ts && dpm doc -d && dpm tools install
-```
-
-- Canary ( Ultimate features )
-
-```
-deno install -qAf --unstable --import-map=https://denopkg.com/dpmland/dpm@dev/import_map.json https://denopkg.com/dpmland/dpm@dev/dpm.ts && dpm doc -d && dpm tools install
+deno run -A --unstable https://denopkg.com/dpmland/dpm@dev/install.ts
 ```
