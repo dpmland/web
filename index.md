@@ -10,5 +10,5 @@ If you want test dpm in the development version **NOT DOCUMENTATION PROVIDED** a
 COMPLETE FEATURES** can you install with:
 
 ```sh
-deno run -A --unstable https://denopkg.com/dpmland/dpm@dev/install.ts
+deno run -A --unstable https://raw.githubusercontent.com/dpmland/dpm/dev/install.ts
 ```
