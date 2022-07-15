@@ -1,13 +1,10 @@
 {
-  "deno.enable": true,
-  "deno.lint": true,
-  "deno.unstable": true,
-  "deno.suggest.imports.hosts": {
-    "https://deno.land": true
-  },
-  "deno.importMap": "./import_map.json",
-  "deno.config": "./deno.json",
-  "files.associations": {
-    "*.njk": "html"
-  }
+	"deno.enable": true,
+	"deno.lint": true,
+	"deno.unstable": true,
+	"deno.suggest.imports.hosts": {
+		"https://deno.land": true
+	},
+	"deno.importMap": "./dpm_imports.json",
+	"deno.config": "./deno.json"
 }

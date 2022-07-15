@@ -28,4 +28,4 @@ jobs:
         uses: denoland/deployctl@v1
         with:
           project: project-name
-          entrypoint: server.ts
+          entrypoint: mod.ts

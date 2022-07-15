@@ -1,16 +1,17 @@
 {
-  "$schema": "https://deno.land/x/deno@v1.17.2/cli/schemas/config-file.v1.json",
-  "lint": {
-    "rules": {
-      "exclude": ["no-explicit-any"]
-    }
-  },
-  "fmt": {
-    "options": {
-      "useTabs": false,
-      "indentWidth": 2,
-      "singleQuote": true,
-      "lineWidth": 90
-    }
-  }
+	"$schema": "https://deno.land/x/deno/cli/schemas/config-file.v1.json",
+	"fmt": {
+		"options": {
+			"useTabs": true,
+			"indentWidth": 2,
+			"singleQuote": true
+		}
+	},
+	"importMap": "./dpm_imports.json",
+	"tasks": {
+		"test": "deno test -A --unstable",
+		"fmt": "deno fmt -c deno.json",
+		"lint": "deno lint -c deno.json",
+		"run": "denon start"
+	}
 }
