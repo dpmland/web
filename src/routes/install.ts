@@ -2,9 +2,9 @@ import { Router } from 'opine/mod.ts';
 
 const router = Router();
 
-// GET users listing.
+// Redirect to the Installer
 router.get('/', (_req, res, _next) => {
-	res.send('Users are coming shortly!');
+	res.redirect('https://raw.githubusercontent.com/dpmland/dpm/main/install.ts');
 });
 
 export default router;

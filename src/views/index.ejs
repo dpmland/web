@@ -6,6 +6,7 @@
     <%= title %>
   </title>
   <link rel="stylesheet" href="/css/style.css" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -21,6 +22,33 @@
       <span class="letter">M</span>
     </div>
   </div>
+  <script>
+    // Set the Fonts
+    const fonts = [
+      'Bangers',
+      'Amatic SC',
+      'Fredericka the Great',
+      'Indie Flower',
+      'Kirang Haerang',
+      'Rye',
+    ];
+
+    const letters = document.getElementsByClassName('letter')
+
+    function rollIntro() {
+      for (const i of letters) {
+        i.style.fontFamily = fonts[Math.floor(Math.random() * fonts.length)]
+        console.log(i.style.fontFamily)
+      }
+    }
+
+    const introAnimation = setInterval(function () {
+      rollIntro()
+      if (count > 500)
+        clearInterval(introAnimation)
+      count++;
+    }, 350)
+  </script>
 </body>
 
 </html>

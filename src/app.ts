@@ -6,7 +6,8 @@ import { dirname, fromFileUrl, join } from 'path/mod.ts';
 import type { ErrorRequestHandler } from 'opine/mod.ts';
 
 import indexRouter from 'routes/index.ts';
-import usersRouter from 'routes/users.ts';
+import installRoute from 'routes/install.ts';
+import schemaRoute from 'routes/schema.ts';
 
 const __dirname = fromFileUrl(dirname(import.meta.url));
 
@@ -26,7 +27,8 @@ app.use(serveStatic(join(__dirname, 'public')));
 
 // Mount our routers
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
+app.use('/install', installRoute);
+app.use('/schema', schemaRoute);
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
