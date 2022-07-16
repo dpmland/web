@@ -4,9 +4,9 @@
 		"http_errors/": "https://deno.land/x/http_errors@3.0.0/",
 		"dejs/": "https://deno.land/x/dejs@0.10.3/",
 		"path/": "https://deno.land/x/std@0.148.0/path/",
-		"routes/": "./src/routes/",
-		"views/": "./src/views/",
-		"public/": "./src/public/",
-		"@/": "./src/"
+		"routes/": "./routes/",
+		"views/": "./views/",
+		"public/": "./public/",
+		"@/": "./"
 	}
 }

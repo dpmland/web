@@ -16,7 +16,7 @@ function exists(file: string): boolean {
 }
 
 router.get('/', async (_req, res, _next) => {
-	const path = join(Deno.cwd(), 'src', 'schema.json');
+	const path = join(Deno.cwd(), 'schema.json');
 	if (exists(path) == false) {
 		res.setStatus(500).json({
 			error: 'Not found the file of the schema please report this on GitHub',
