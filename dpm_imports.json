@@ -7,8 +7,6 @@
 		"routes/": "./src/routes/",
 		"views/": "./src/views/",
 		"public/": "./src/public/",
-		"@/": "./src/",
-		"draco/": "https://deno.land/x/draco@0.1.3/",
-		"random/": "https://deno.land/x/random@v1.1.2/"
+		"@/": "./src/"
 	}
 }
