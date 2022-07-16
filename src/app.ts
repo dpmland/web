@@ -42,7 +42,7 @@ const errorHandler: ErrorRequestHandler = (err, req, res, next) => {
 	// Render the error page
 	res.setStatus(err.status ?? 500);
 	res.render('error', {
-		title: 'Opine',
+		title: 'Deno Package Manager ERROR',
 	});
 };
 
