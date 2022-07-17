@@ -1,17 +1,24 @@
 {
-	"$schema": "https://raw.githubusercontent.com/dpmland/dpm/main/schemas/dpm.json",
-	"name": "dpm-web",
-	"version": "0.1.0",
-	"description": "The official website of DPM",
-	"author": "TeoDev, Dpm Authors",
-	"license": "GPL v3",
-	"main": "app.ts",
-	"scripts": {
-		"build_in": {
-			"test": "deno test -A --unstable",
-			"fmt": "deno fmt -c deno.json",
-			"lint": "deno lint -c deno.json"
-		}
-	},
-	"dependencies": {}
+  "$schema": "https://raw.githubusercontent.com/dpmland/dpm/main/schemas/dpm.json",
+  "name": "dpm-web",
+  "version": "0.1.0",
+  "description": "The official website of DPM",
+  "author": "TeoDev, Dpm Authors",
+  "license": "GPL v3",
+  "main": "app.ts",
+  "scripts": {
+    "build_in": {
+      "test": "deno test -A --unstable",
+      "fmt": "deno fmt -c deno.json",
+      "lint": "deno lint -c deno.json"
+    }
+  },
+  "dependencies": {
+    "oak": "v10.6.0",
+    "view_engine": "v10.6.0",
+    "path": "https://deno.land/x/std@0.148.0/path/",
+    "http_errors": "3.0.0",
+    "fmt": "https://deno.land/x/std@0.148.0/fmt/",
+    "oak_logger": "1.0.0"
+  }
 }

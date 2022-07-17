@@ -1,3 +1,11 @@
 {
-	"imports": {}
+  "imports": {
+    "oak/": "https://deno.land/x/oak@v10.6.0/",
+    "view_engine/": "https://deno.land/x/view_engine@v10.6.0/",
+    "path/": "https://deno.land/x/std@0.148.0/path/",
+    "http_errors/": "https://deno.land/x/http_errors@3.0.0/",
+    "routes/": "./router/",
+    "fmt/": "https://deno.land/x/std@0.148.0/fmt/",
+    "oak_logger/": "https://deno.land/x/oak_logger@1.0.0/"
+  }
 }
