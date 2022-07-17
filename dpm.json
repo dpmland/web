@@ -1,0 +1,17 @@
+{
+	"$schema": "https://raw.githubusercontent.com/dpmland/dpm/main/schemas/dpm.json",
+	"name": "dpm-web",
+	"version": "0.1.0",
+	"description": "The official website of DPM",
+	"author": "TeoDev, Dpm Authors",
+	"license": "GPL v3",
+	"main": "app.ts",
+	"scripts": {
+		"build_in": {
+			"test": "deno test -A --unstable",
+			"fmt": "deno fmt -c deno.json",
+			"lint": "deno lint -c deno.json"
+		}
+	},
+	"dependencies": {}
+}

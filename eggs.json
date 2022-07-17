@@ -1,0 +1,16 @@
+{
+	"name": "dpm-web",
+	"entry": "app.ts",
+	"description": "The official website of DPM",
+	"version": "0.1.0",
+	"homepage": "https://github.com/your_name/dpm-web",
+	"unstable": true,
+	"unlisted": false,
+	"releaseType": "patch",
+	"files": ["./mod.ts", "./src/**/*", "./README.md"],
+	"ignore": [".git"],
+	"checkFormat": "deno fmt",
+	"checkTests": "deno test",
+	"checkInstallation": true,
+	"check": false
+}
