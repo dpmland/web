@@ -1,6 +1,6 @@
 // Copyright © 2022 Dpm Land. All Rights Reserved.
 
-import { Application, send } from 'oak/mod.ts';
+import { Application } from 'oak/mod.ts';
 import { dejsEngine, oakAdapter, viewEngine } from 'view_engine/mod.ts';
 import logger from 'oak_logger/mod.ts';
 import { join } from 'path/mod.ts';
@@ -18,21 +18,17 @@ APP.use(viewEngine(oakAdapter, dejsEngine, {
   viewRoot: `${join(Deno.cwd(), 'views')}`,
 }));
 
-// Log Out
-APP.use(logger.logger);
-APP.use(logger.responseTime);
-
-// Static file support
-APP.use(async (ctx, next) => {
-  await send(ctx, ctx.request.url.pathname, {
-    root: `${join(Deno.cwd(), 'public')}`,
-  });
-  next();
-});
-
 // Routes
 APP.use(daddyRouter.routes());
 APP.use(daddyRouter.allowedMethods());
+
+if (
+  typeof Deno.env.get('ENVIROMENT') == 'undefined' ||
+  Deno.env.get('ENVIROMENT') == 'dev'
+) {
+  APP.use(logger.logger);
+  APP.use(logger.responseTime);
+}
 
 // Start the App
 

@@ -1,12 +1,64 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title><%= title %></title>
-    <link rel="stylesheet" href="/css/style.css" />
-  </head>
-  <body>
-    <h1><%= message %></h1>
-    <h2><%= error.status %></h2>
-    <pre><%= error.stack %></pre>
-  </body>
+
+<head>
+  <title>
+    <%= title %>
+  </title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@500&display=swap" rel="stylesheet">
+</head>
+
+<style>
+  * {
+    background-color: black;
+    color: white;
+    font-family: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Fira Code', monospace;
+  }
+
+  .error {
+    position: absolute;
+    border: 3px double #f44336;
+    height: 50vh;
+    width: 100vh;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+  }
+
+  .error h1 {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -180%);
+  }
+
+  .error #deno {
+    width: 125px;
+    height: 125px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, 25%);
+  }
+</style>
+
+<body>
+  <div class="error">
+    <h1>
+      <%= message %>
+      <%= error.status %>
+      <img src="https://deno.land/images/deno_logo_4.gif" alt="Deno Animated Logo" id="deno">
+    </h1>
+  </div>
+</body>
+
 </html>
