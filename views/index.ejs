@@ -35,11 +35,11 @@
     ];
 
     const letters = document.getElementsByClassName('letter')
+    let count = 0
 
     function rollIntro() {
       for (const i of letters) {
         i.style.fontFamily = fonts[Math.floor(Math.random() * fonts.length)]
-        console.log(i.style.fontFamily)
       }
     }
 
@@ -48,7 +48,7 @@
       if (count > 500)
         clearInterval(introAnimation)
       count++;
-    }, 350)
+    }, 900)
   </script>
 </body>
 
