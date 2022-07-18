@@ -6,6 +6,7 @@
     "http_errors/": "https://deno.land/x/http_errors@3.0.0/",
     "routes/": "./router/",
     "fmt/": "https://deno.land/x/std@0.148.0/fmt/",
-    "oak_logger/": "https://deno.land/x/oak_logger@1.0.0/"
+    "oak_logger/": "https://deno.land/x/oak_logger@1.0.0/",
+    "datetime/": "https://deno.land/x/std@0.148.0/datetime/"
   }
 }

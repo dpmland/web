@@ -11,6 +11,8 @@
   "tasks": {
     "test": "deno test -A --unstable",
     "fmt": "deno fmt -c deno.json",
-    "lint": "deno lint -c deno.json"
+    "lint": "deno lint -c deno.json",
+    "start": "denon start",
+    "update": "wget https://raw.githubusercontent.com/dpmland/dpm/main/schemas/dpm.json -O ./schema.json"
   }
 }

@@ -7,6 +7,8 @@
   "license": "GPL v3",
   "main": "app.ts",
   "scripts": {
+    "start": "denon start",
+    "update": "wget https://raw.githubusercontent.com/dpmland/dpm/main/schemas/dpm.json -O ./schema.json",
     "build_in": {
       "test": "deno test -A --unstable",
       "fmt": "deno fmt -c deno.json",
@@ -19,6 +21,7 @@
     "path": "https://deno.land/x/std@0.148.0/path/",
     "http_errors": "3.0.0",
     "fmt": "https://deno.land/x/std@0.148.0/fmt/",
-    "oak_logger": "1.0.0"
+    "oak_logger": "1.0.0",
+    "datetime": "https://deno.land/x/std@0.148.0/datetime/"
   }
 }
