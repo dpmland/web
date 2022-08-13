@@ -14,17 +14,19 @@ const APP = new Application();
 const PORT = 3000;
 
 // Middlewares
-APP.use(viewEngine(oakAdapter, dejsEngine, {
-  viewRoot: `${join(Deno.cwd(), 'views')}`,
-}));
+APP.use(
+  viewEngine(oakAdapter, dejsEngine, {
+    viewRoot: `${join(Deno.cwd(), 'views')}`,
+  }),
+);
 
 // Routes
 APP.use(daddyRouter.routes());
 APP.use(daddyRouter.allowedMethods());
 
 if (
-  typeof Deno.env.get('ENVIROMENT') == 'undefined' ||
-  Deno.env.get('ENVIROMENT') == 'dev'
+  typeof Deno.env.get('DEV') == 'undefined' ||
+  Deno.env.get('DEV') == 'true'
 ) {
   APP.use(logger.logger);
   APP.use(logger.responseTime);
@@ -36,7 +38,9 @@ APP.addEventListener('listen', ({ secure, hostname, port }) => {
   const protocol = secure ? 'https://' : 'http://';
   console.log(
     `${brightBlue('Listening on:')} ${
-      brightMagenta(`${protocol}${hostname ?? 'localhost'}:${port}`)
+      brightMagenta(
+        `${protocol}${hostname ?? 'localhost'}:${port}`,
+      )
     }`,
   );
 });
