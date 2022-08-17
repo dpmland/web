@@ -2,14 +2,14 @@
 
 ---
 
-The official website of DPM
+The official DPM Website powered by Oak and Deno
 
-## Information
+## Information :book:
 
-- **Author:** TeoDev, Dpm Authors
+- **Author:** The DPM Authors
 - **Version:** 0.1.0
-- **License:** GPL v3
+- **License:** MIT
 
 ---
 
-Made by [dpm](https://github.com/dpmland/dpm)
+Made by [dpm](https://github.com/dpmland/dpm) :sauropod:

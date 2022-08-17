@@ -1,17 +1,17 @@
 {
-  "$schema": "https://raw.githubusercontent.com/dpmland/dpm/main/schemas/dpm.json",
+  "$schema": "https://dpmland.deno.dev/schema",
   "name": "dpm-web",
   "version": "0.1.0",
-  "description": "The official website of DPM",
-  "author": "TeoDev, Dpm Authors",
-  "license": "GPL v3",
-  "main": "app.ts",
+  "description": "The official DPM Website powered by Oak and Deno",
+  "author": "The DPM Authors",
+  "license": "MIT",
+  "main": "mod.ts",
   "scripts": {
-    "start": "denon start",
-    "update": "wget https://raw.githubusercontent.com/dpmland/dpm/main/schemas/dpm.json -O ./schema.json",
     "test": "deno test -A --unstable",
     "fmt": "deno fmt -c deno.json",
-    "lint": "deno lint -c deno.json"
+    "lint": "deno lint -c deno.json",
+    "start": "deno run -A app.ts",
+    "fmt:check": "deno fmt -c deno.json --check && deno lint -c deno.json"
   },
   "dependencies": {
     "datetime/": "0.152.0",

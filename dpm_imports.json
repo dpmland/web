@@ -6,7 +6,6 @@
     "oak/": "https://deno.land/x/oak@v10.6.0/",
     "view_engine/": "https://deno.land/x/view_engine@v10.6.0/",
     "http_errors/": "https://deno.land/x/http_errors@3.0.0/",
-    "oak_logger/": "https://deno.land/x/oak_logger@1.0.0/",
-    "routes/": "./router/"
+    "oak_logger/": "https://deno.land/x/oak_logger@1.0.0/"
   }
 }

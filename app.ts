@@ -7,7 +7,7 @@ import { join } from 'path/mod.ts';
 import { brightBlue, brightMagenta } from 'fmt/colors.ts';
 
 // Own Routes
-import daddyRouter from 'routes/daddy.ts';
+import daddyRouter from './router/daddy.ts';
 
 // Start the Deno App
 const APP = new Application();

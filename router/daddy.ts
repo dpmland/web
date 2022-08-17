@@ -1,6 +1,5 @@
 import { Context, Router } from 'oak/mod.ts';
 import { createError } from 'http_errors/mod.ts';
-import { join } from 'path/mod.ts';
 
 const R = new Router();
 
