@@ -1,0 +1,22 @@
+{
+  "$schema": "https://dpmland.deno.dev/schema",
+  "name": "dpm-web",
+  "version": "0.1.2",
+  "description": "The official DPM Website.",
+  "author": "The DPM Authors Team",
+  "license": "MIT",
+  "main": "main.ts",
+  "scripts": {
+    "test": "deno test -A --unstable",
+    "fmt": "deno fmt -c deno.json",
+    "lint": "deno lint -c deno.json",
+    "start": "deno run -A --watch=static/,routes/ dev.ts",
+    "fmt:check": "deno fmt -c deno.json --check && deno lint -c deno.json"
+  },
+  "dependencies": {
+    "fresh/": "1.0.2",
+    "twind/": "0.16.17",
+    "preact/": "10.10.3",
+    "preact-render-to-string/": "5.2.2"
+  }
+}
