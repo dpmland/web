@@ -1,3 +1,4 @@
+// Copyright © 2022 Dpm Land. All Rights Reserved.
 /** @jsx h */
 import { h } from 'preact';
 import { tw } from '@twind';

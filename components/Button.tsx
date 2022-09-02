@@ -1,3 +1,5 @@
+// Copyright © 2022 Dpm Land. All Rights Reserved.
+
 /** @jsx h */
 import { h } from 'preact';
 import { IS_BROWSER } from '$fresh/runtime.ts';

@@ -1,3 +1,4 @@
+// Copyright © 2022 Dpm Land. All Rights Reserved.
 import { IS_BROWSER } from '$fresh/runtime.ts';
 import { Configuration, setup } from 'twind';
 export * from 'twind';

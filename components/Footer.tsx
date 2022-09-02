@@ -1,6 +1,8 @@
+// Copyright © 2022 Dpm Land. All Rights Reserved.
+
 /** @jsx h */
 import { h } from 'preact';
-import { tw } from '../utils/twind.ts';
+import { tw } from '@twind';
 
 const LINKS = [
   {
@@ -24,7 +26,7 @@ export default function Footer(): h.JSX.Element {
         ))}
       </section>
       <section class='text(gray-100 center)'>
-        <span>© {new Date().getFullYear()} dpm land</span>
+        <span>© {new Date().getFullYear()} Dpm Land</span>
       </section>
     </footer>
   );
