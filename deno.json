@@ -1,5 +1,15 @@
 {
+  "$schema": "https://deno.land/x/deno/cli/schemas/config-file.v1.json",
+  "fmt": {
+    "options": {
+      "useTabs": false,
+      "indentWidth": 2,
+      "singleQuote": true
+    }
+  },
   "tasks": {
+    "check": "deno fmt -c deno.json --check ; deno lint -c deno.json",
+    "fmt": "deno fmt -c deno.json ; deno lint -c deno.json",
     "start": "deno run -A --watch=static/,routes/ dev.ts"
   },
   "importMap": "./import_map.json"
