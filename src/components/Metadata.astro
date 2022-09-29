@@ -1,0 +1,20 @@
+---
+const { title, description } = Astro.props
+---
+
+<meta name="title" content={title} />
+<meta property="og:title" content={title} />
+<meta property="twitter:title" content={title} />
+{
+  description && (
+    <>
+      <meta name="description" content={description} />
+      <meta name="og:description" content={description} />
+      <meta name="twitter:description" content={description} />
+    </>
+  )
+}
+<meta property="twitter:url" content={Astro.url} />
+<meta property="og:url" content={Astro.url} />
+<meta property="og:type" content="website" />
+<meta property="twitter:card" content="summary" />
