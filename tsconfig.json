@@ -1,12 +1,16 @@
 {
   "extends": "astro/tsconfigs/base",
   "compilerOptions": {
+    "isolatedModules": false,
     "types": ["@astrojs/image/client"],
     "baseUrl": ".",
     "paths": {
       "@docs/*": ["docs/*"],
       "@components/*": ["src/components/*"],
       "@layouts/*": ["src/layouts/*"],
+      "@styles/*": ["src/styles/*"],
+      "@utils/*": ["src/utils/*"],
+      "@constants/*": ["src/constants/*"],
     },
   }
 }

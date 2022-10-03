@@ -1,8 +1,22 @@
 ---
 import Metadata from '@components/Metadata.astro'
 import Favicons from '@components/Favicons.astro'
+import Header from '@components/Header.astro'
 
-const { title, description = "Deno Package Manager is a new way for manage the Deno Modules with a NPM Experience for Deno" } = Astro.props
+import '@styles/normalize.css'
+import '@fontsource/roboto'
+import '@styles/global.css'
+
+interface Props {
+  title: string
+  description?: string
+  children: Astro.Children
+}
+
+const {
+  title,
+  description = 'Deno Package Manager is a new way for manage the Deno Modules with a NPM Experience for Deno',
+} = Astro.props
 ---
 
 <html lang="en">
@@ -12,13 +26,18 @@ const { title, description = "Deno Package Manager is a new way for manage the D
     <title>{title} | Deno Package Manager</title>
     <slot name="head" />
     <Favicons />
-    <Metadata
-      title={title}
-      description={description}
-    />
+    <Metadata title={title} description={description} />
     <meta name="generator" content={Astro.generator} />
   </head>
   <body>
-    <slot />
+    <Header />
+    <main class="main">
+      <slot />
+    </main>
+    <style>
+      .main {
+        padding: min(2rem, 5vw);
+      }
+    </style>
   </body>
 </html>
