@@ -5,12 +5,12 @@ import Header from '@components/Header.astro'
 
 import '@styles/normalize.css'
 import '@fontsource/roboto'
-import '@styles/global.css'
+import '@styles/global.scss'
 
 interface Props {
   title: string
   description?: string
-  children: Astro.Children
+  children: any
 }
 
 const {
@@ -36,7 +36,10 @@ const {
     </main>
     <style>
       .main {
-        padding: min(2rem, 5vw);
+        max-width: var(--page-main-max-width);
+        margin-left: auto;
+        margin-right: auto;
+        padding: min(2rem, 2.5vw);
       }
     </style>
   </body>

@@ -1,7 +1,10 @@
 :root {
   --primary-color: #161614;
   --secondary-color: #fff;
+  --tertiary-color: #e2e2e2;
   --hightlight-color: royalblue;
+  --success-color: #00ff00;
+  --error-color: #ff0000;
 
   --code-primary-color: #fff;
   --code-secondary-color: #21222c;
@@ -10,6 +13,7 @@
   --primary-font: 'Roboto', sans-serif;
 
   --page-max-width: 89rem;
+  --page-main-max-width: 70rem;
 }
 
 :root.theme-dark {
@@ -43,4 +47,10 @@ a {
 img {
   display: block;
   width: 100%;
+}
+
+button {
+  background: none;
+  padding: 0;
+  border: none;
 }

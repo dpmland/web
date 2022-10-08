@@ -1,0 +1,54 @@
+---
+import CopyButton from '@components/CopyButton.svelte'
+
+const [command, ...args] = Astro.props.command.split(' ')
+---
+
+<p class="snippet">
+  <span class="snippet__command--container">
+    <code class="snippet__code">
+      $ <span class="command">{command}</span>
+      {args.join(' ')}
+    </code>
+  </span>
+  <CopyButton text={Astro.props.command} isSnippet={true} client:idle />
+</p>
+
+<style lang="scss">
+  .snippet {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background-color: var(--code-secondary-color);
+    max-width: fit-content;
+    padding: 0.75rem 1.25rem;
+    margin: 3rem auto;
+    font-size: min(1.15rem, 4vw);
+    color: var(--code-primary-color);
+    border-radius: 0.25rem;
+    box-shadow: 0 0 0.25rem rgba(#000, 0.25);
+
+    &__command--container {
+      scrollbar-color: var(--code-primary-color) transparent;
+      scrollbar-width: thin;
+      overflow-x: auto;
+
+      &::-webkit-scrollbar {
+        height: 0.2rem;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background: var(--code-primary-color);
+      }
+    }
+
+    &__code {
+      display: block;
+      width: max-content;
+    }
+  }
+
+  .command {
+    color: var(--code-hightlight-color);
+  }
+</style>
