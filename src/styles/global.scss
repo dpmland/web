@@ -28,6 +28,8 @@
 }
 
 html {
+  scrollbar-color: var(--code-primary-color) transparent;
+  scrollbar-width: thin;
   box-sizing: border-box;
 }
 
@@ -37,6 +39,14 @@ body {
   font-family: var(--primary-font);
   color: var(--primary-color);
   transition: background-color 0.3s ease-in-out, color 0.2s ease-in-out;
+
+  &::-webkit-scrollbar {
+    width: 0.5rem;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--primary-color);
+  }
 }
 
 a {
