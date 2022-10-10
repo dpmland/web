@@ -19,6 +19,7 @@
 :root.theme-dark {
   --primary-color: #fff;
   --secondary-color: #161614;
+  --tertiary-color: #242529;
 }
 
 *,
@@ -63,4 +64,10 @@ button {
   background: none;
   padding: 0;
   border: none;
+}
+
+ul,
+ol {
+  list-style: none;
+  padding-left: 0;
 }

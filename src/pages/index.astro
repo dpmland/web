@@ -3,6 +3,7 @@ import MainLayout from '@layouts/MainLayout.astro'
 import Bold from '@components/Bold.astro'
 import Command from '@components/Command.astro'
 import TextWithIcon from '@components/TextWithIcon.astro'
+import Contributors from '@components/Contributors.svelte'
 ---
 
 <MainLayout title="Home">
@@ -20,8 +21,8 @@ import TextWithIcon from '@components/TextWithIcon.astro'
     command="deno run -A --unstable https://dpmland.deno.dev/install stable"
   />
 
-  <section class="features">
-    <h2 class="features__title">Features</h2>
+  <section class="section">
+    <h2 class="section__title">Features</h2>
 
     <ul class="list">
       <li class="list__item">
@@ -67,6 +68,24 @@ import TextWithIcon from '@components/TextWithIcon.astro'
       <li class="list__item">Powerful logger system</li>
     </ul>
   </section>
+
+  <section class="section">
+    <header>
+      <h2 class="section__title">Contributors</h2>
+      <p class="section__text">Top contributors of the project. 🏆</p>
+    </header>
+    <div class="section__body">
+      <Contributors client:idle />
+    </div>
+    <a
+      class="link"
+      href="https://github.com/dpmland/dpm/graphs/contributors"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      🔗 See all contributors
+    </a>
+  </section>
 </MainLayout>
 
 <style lang="scss">
@@ -88,14 +107,24 @@ import TextWithIcon from '@components/TextWithIcon.astro'
     margin-right: auto;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
-    font-size: Min(1.75rem, 4.5vw);
+    font-size: Mins(1.75rem, 4.5vw);
     text-align: center;
   }
 
-  .features {
+  .section {
     padding: Min(2rem, 2.5vw);
+
     &__title {
       font-size: Min(2.5rem, 7.5vw);
+    }
+
+    &__text {
+      margin-bottom: 2rem;
+      font-size: Min(1.25rem, 4.5vw);
+    }
+
+    &__body {
+      padding-left: Min(2rem, 6vw);
     }
   }
 
@@ -119,5 +148,18 @@ import TextWithIcon from '@components/TextWithIcon.astro'
     color: var(--code-primary-color);
     border-radius: 0.5rem;
     color: var(--code-hightlight-color);
+  }
+
+  .link {
+    display: inline-block;
+    background-color: var(--tertiary-color);
+    padding: 0.5rem 1rem;
+    margin-top: 1rem;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+
+    &:hover {
+      background-color: var(--primary-color);
+      color: var(--secondary-color);
+    }
   }
 </style>
