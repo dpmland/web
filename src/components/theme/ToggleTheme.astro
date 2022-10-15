@@ -3,7 +3,6 @@
   import getTheme from '@utils/getTheme'
 
   const toggle = document.getElementById('toggle-theme')!
-
   const [sunIcon, moonIcon] = toggle.children
   const root = document.documentElement
 
@@ -28,7 +27,13 @@
   toggle.addEventListener('click', () => {
     theme = theme === THEMES.DARK ? THEMES.LIGHT : THEMES.DARK
 
-    localStorage.setItem('theme', theme)
+    const { matches } = window.matchMedia('(prefers-color-scheme: dark)')
+    const mediaTheme = matches ? THEMES.DARK : THEMES.LIGHT
+
+    theme === mediaTheme
+      ? localStorage.removeItem('theme')
+      : localStorage.setItem('theme', theme)
+
     updateTheme()
   })
 </script>
