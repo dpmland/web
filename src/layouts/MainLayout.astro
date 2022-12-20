@@ -1,0 +1,50 @@
+---
+import LoadThemeScript from '@components/theme/LoadThemeScript.astro'
+import Metadata from '@components/Metadata.astro'
+import Favicons from '@components/Favicons.astro'
+import Header from '@components/Header.astro'
+
+import '@styles/normalize.css'
+import '@fontsource/roboto'
+import '@styles/global.scss'
+
+interface Props {
+  title: string
+  description?: string
+  children: any
+}
+
+const {
+  title,
+  description = 'Deno Package Manager is a new way for manage the Deno Modules with a NPM Experience for Deno',
+} = Astro.props
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>{title} | Deno Package Manager</title>
+    <slot name="head" />
+    <!-- Load theme instantly -->
+    <LoadThemeScript />
+    <Favicons />
+    <Metadata title={title} description={description} />
+    <meta name="generator" content={Astro.generator} />
+  </head>
+  <body>
+    <Header />
+    <main class="main">
+      <slot />
+    </main>
+
+    <style>
+      .main {
+        max-width: var(--page-main-max-width);
+        margin-left: auto;
+        margin-right: auto;
+        padding: min(2rem, 2.5vw);
+      }
+    </style>
+  </body>
+</html>

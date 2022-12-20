@@ -1,0 +1,24 @@
+---
+interface Props {
+  src: string
+  alt?: string
+  width?: number
+  height?: number
+  children: any
+}
+
+const { src, alt = '', width, height } = Astro.props
+---
+
+<span class="text">
+  <slot />
+  <img src={src} alt={alt} width={width} height={height} />
+</span>
+
+<style lang="scss">
+  .text {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+</style>

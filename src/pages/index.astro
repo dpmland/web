@@ -1,0 +1,165 @@
+---
+import MainLayout from '@layouts/MainLayout.astro'
+import Bold from '@components/Bold.astro'
+import Command from '@components/Command.astro'
+import TextWithIcon from '@components/TextWithIcon.astro'
+import Contributors from '@components/Contributors.svelte'
+---
+
+<MainLayout title="Home">
+  <h1 class="title">
+    <img src="/assets/icons/logo.svg" alt="logo" width={150} height={150} />
+    Deno Package Manager
+  </h1>
+
+  <p class="text">
+    <Bold>Simple, modern and easy way</Bold>
+    to manage the Deno modules and dependencies.
+  </p>
+
+  <Command
+    command="deno run -A --unstable https://dpmland.deno.dev/install stable"
+  />
+
+  <section class="section">
+    <h2 class="section__title">Features</h2>
+
+    <ul class="list">
+      <li class="list__item">
+        Build all with
+        <TextWithIcon src="/assets/icons/typescript.svg" width={17} height={17}>
+          TypeScript
+        </TextWithIcon>
+      </li>
+      <li class="list__item">
+        <code class="code">deno lint</code>
+        and
+        <code class="code">deno fmt</code> commands support
+      </li>
+      <li class="list__item">
+        Config generator for
+        <code class="code">deno lint</code>,
+        <code class="code">deno fmt</code>
+        and
+        <code class="code">deno test</code>
+      </li>
+      <li class="list__item">
+        Manage all in a <code class="code">dpm.json</code> file with the same syntax
+        of the
+        <code class="code">package.json</code> and more features
+      </li>
+      <li class="list__item">
+        Generate all dependencies from a <code class="code"
+          >import_map.json</code
+        > file
+      </li>
+      <li class="list__item">Offline documentation manager</li>
+      <li class="list__item">
+        Tools helper manager: install all tools for a better
+        <TextWithIcon src="/assets/icons/deno.svg" width={25} height={25}>
+          Deno
+        </TextWithIcon>
+        development
+      </li>
+      <li class="list__item">Update the dependencies manager</li>
+      <li class="list__item">
+        Information about some directories and versions
+      </li>
+      <li class="list__item">Powerful logger system</li>
+    </ul>
+  </section>
+
+  <section class="section">
+    <header>
+      <h2 class="section__title">Contributors</h2>
+      <p class="section__text">Top contributors of the project. 🏆</p>
+    </header>
+    <div class="section__body">
+      <Contributors client:idle />
+    </div>
+    <a
+      class="link"
+      href="https://github.com/dpmland/dpm/graphs/contributors"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      🔗 See all contributors
+    </a>
+  </section>
+</MainLayout>
+
+<style lang="scss">
+  .title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: Min(5rem, 6.5vw);
+    margin-bottom: Min(3.75rem, 5vw);
+    font-size: Min(3.5rem, 6.5vw);
+    text-align: center;
+  }
+
+  .text {
+    max-width: 40rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    font-size: Mins(1.75rem, 4.5vw);
+    text-align: center;
+  }
+
+  .section {
+    padding: Min(2rem, 2.5vw);
+
+    &__title {
+      font-size: Min(2.5rem, 7.5vw);
+    }
+
+    &__text {
+      margin-bottom: 2rem;
+      font-size: Min(1.25rem, 4.5vw);
+    }
+
+    &__body {
+      padding-left: Min(2rem, 6vw);
+    }
+  }
+
+  .list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    font-size: Min(1.15rem, 4.5vw);
+    padding-left: Min(3rem, 6vw);
+    list-style-type: '\1F31F';
+
+    &__item {
+      padding-left: 0.5rem;
+    }
+  }
+
+  .code {
+    display: inline-block;
+    background-color: var(--code-secondary-color);
+    padding: 0.15rem 0.5rem;
+    color: var(--code-primary-color);
+    border-radius: 0.5rem;
+    color: var(--code-hightlight-color);
+  }
+
+  .link {
+    display: inline-block;
+    background-color: var(--tertiary-color);
+    padding: 0.5rem 1rem;
+    margin-top: 1rem;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+
+    &:hover {
+      background-color: var(--primary-color);
+      color: var(--secondary-color);
+    }
+  }
+</style>
