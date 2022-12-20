@@ -1,0 +1,7 @@
+{
+  "install": "https://raw.githubusercontent.com/dpmland/dpm/main/install.ts",
+  "schema": "https://raw.githubusercontent.com/dpmland/dpm/main/schemas/dpm.json",
+  "discord": "https://discord.com/invite/Um27YPJKud",
+  "github": "https://github.com/dpmland/dpm",
+  "docs": "https://github.com/dpmland/docs/wiki"
+}
