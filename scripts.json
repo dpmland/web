@@ -1,9 +1,0 @@
-{
-  "$schema": "https://deno.land/x/denon@2.5.0/schema.json",
-  "scripts": {
-    "start": {
-      "cmd": "deno run -A app.ts",
-      "desc": "Start the App serve With Oak and Live Reload with Denon"
-    }
-  }
-}

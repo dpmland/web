@@ -1,0 +1,17 @@
+<script is:inline>
+  const theme = (() => {
+    const storageTheme = localStorage.getItem('theme')
+
+    if (storageTheme) return storageTheme
+
+    if (window.matchMedia('(prefers-color-scheme: dark)').matches) return 'dark'
+
+    return 'light'
+  })()
+
+  const root = document.documentElement
+
+  theme === 'dark'
+    ? root.classList.add('theme-dark')
+    : root.documentElement.classList.remove('theme-dark')
+</script>

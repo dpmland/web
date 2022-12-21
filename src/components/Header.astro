@@ -1,0 +1,98 @@
+---
+import ToggleTheme from '@components/theme/ToggleTheme.astro'
+import BookIcon from '@components/icons/Book.astro'
+import DiscordIcon from '@components/icons/Discord.astro'
+import GithubIcon from '@components/icons/Github.astro'
+---
+
+<header class="header">
+  <div class="header__content">
+    <a href="/" class="homepage-link">
+      <img src="/assets/icons/logo.svg" alt="Homepage" width={48} height={48} />
+    </a>
+
+    <nav class="navigation">
+      <ul class="menu">
+        <li class="menu__item">
+          <a class="menu__link" href="/docs" title="Docs">
+            <BookIcon aria-hidden="true" width="1.875rem" height="1.875rem" />
+          </a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="/discord" target="_blank" title="Discord">
+            <DiscordIcon
+              aria-hidden="true"
+              width="1.875rem"
+              height="1.875rem"
+            />
+          </a>
+        </li>
+        <li class="menu__item">
+          <a
+            class="menu__link"
+            href="/github"
+            target="_blank"
+            aria-label="Github"
+            title="Github"
+          >
+            <GithubIcon aria-hidden="true" width="1.875rem" height="1.875rem" />
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <ToggleTheme />
+  </div>
+</header>
+
+<style lang="scss">
+  .header {
+    padding: 0.75rem 1rem;
+    box-shadow: 1rem 0 0.75rem rgba(#000, 0.25);
+
+    &__content {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      max-width: var(--page-max-width);
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  .navigation {
+    width: 100%;
+    margin-left: auto;
+  }
+
+  .menu {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+
+    &__item,
+    &__link {
+      display: flex;
+      align-items: center;
+    }
+
+    &__item {
+      display: grid;
+      place-items: center;
+      width: 2.5rem;
+      height: 2.5rem;
+      padding: 0.25rem;
+    }
+
+    &__link {
+      gap: 0.5rem;
+      transition: scale 0.2s ease-in-out;
+
+      &:hover {
+        scale: 1.15;
+      }
+    }
+  }
+</style>
