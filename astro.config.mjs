@@ -1,8 +1,13 @@
 import { defineConfig } from 'astro/config'
-import image from '@astrojs/image'
 import svelte from '@astrojs/svelte'
+import deno from '@astrojs/deno'
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [image(), svelte()],
+  output: 'server',
+  adapter: deno(),
+  integrations: [svelte()],
+  vite: {
+    target: 'esnext',
+  }
 })
